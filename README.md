@@ -6,7 +6,6 @@ PERL. This paper explains how printf works, and
 how to design the proper formatting specification for
 any occasion.
 
-
 Prototype: int _printf(const char *format, ...);
 Returns: the number of characters printed (excluding the null byte used to end output to strings)
 write output to stdout, the standard output stream
