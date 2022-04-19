@@ -69,22 +69,22 @@ int print_S(va_list S)
 {
 	unsigned int i;
 	int count = 0;
-	char *str = va_arg(S, char *);
+	char *mystr = va_arg(S, char *);
 
-	if (str == NULL)
-		str = "(null)";
-	for (i = 0; str[i]; i++)
+	if (mystr == NULL)
+		mystr = "(null)";
+	for (i = 0; mystr[i]; i++)
 	{
-		if (str[i] < 32 || str[i] >= 127)
+		if (mystr[i] < 32 || mystr[i] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
 			count += 2;
-			count += hex_print(str[i]);
+			count += hex_print(mystr[i]);
 		}
 		else
 		{
-			_putchar(str[i]);
+			_putchar(mystr[i]);
 			count++;
 		}
 	}
